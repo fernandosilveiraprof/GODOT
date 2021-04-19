@@ -13,12 +13,9 @@ extents = Vector3( 1, 2.00456, 1 )
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 2, 4, 2 )
 
-[node name="world" type="Spatial"]
-
-[node name="piso" type="Spatial" parent="."]
+[node name="World" type="Spatial"]
 
 [node name="piso2" type="StaticBody" parent="."]
-editor/display_folded = true
 
 [node name="MeshInstance" type="MeshInstance" parent="piso2"]
 transform = Transform( 13.8092, 0, 0, 0, 1, 0, 0, 0, 13.8092, 0, 0, 0 )
