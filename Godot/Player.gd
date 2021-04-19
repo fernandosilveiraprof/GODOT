@@ -75,11 +75,11 @@ func MovementHandler():
 	
 	if (WPressed):
 		
-		MovementVector += Vector3(0, 0, 1)
+		MovementVector += Vector3(0, 0, -1)
 		
 	if (SPressed):
 		
-		MovementVector -= Vector3(0, 0, -1)
+		MovementVector += Vector3(0, 0, 1)
 		
 	if (DPressed):
 		
@@ -87,7 +87,7 @@ func MovementHandler():
 		
 	if (APressed):
 		
-		MovementVector -= Vector3(-1, 0, 0 )
+		MovementVector += Vector3(-1, 0, 0 )
 		
 		
 	MovementVector = MovementVector.normalized() * PlayerSpeed
@@ -103,7 +103,7 @@ func _physics_process(delta):
 	
 	MovementHandler()
 	
-	pass	
+	pass
 	
 	
 	
