@@ -1,6 +1,5 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://objs/cubo.fbx" type="PackedScene" id=2]
 
 [sub_resource type="PlaneMesh" id=1]
@@ -63,6 +62,8 @@ shader = SubResource( 5 )
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 10.6864, 1, 13.6571 )
 
+[sub_resource type="GDScript" id=10]
+
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 1, 2.00456, 1 )
 
@@ -83,9 +84,8 @@ transform = Transform( 1.25811, 0, 0, 0, 0.310721, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 7 )
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( 0.999998, 0.00173445, -0.000796405, -0.0017345, 0.999998, -6.04491e-05, 0.000796298, 6.1849e-05, 1, -0.0883598, 0.0815544, -0.0405598 )
-script = ExtResource( 1 )
-PlayerSpeed = 8.0
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0 )
+script = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.16875, 0 )
@@ -97,11 +97,18 @@ visible = false
 mesh = SubResource( 9 )
 material/0 = null
 
-[node name="Camera" type="Camera" parent="Player"]
-transform = Transform( 1, 2.32831e-10, 1.33878e-09, -4.73946e-10, 0.707107, 0.707107, -2.32831e-10, -0.707107, 0.707106, 0.00780248, 30.0006, 9.79836 )
-
 [node name="OmniLight" type="OmniLight" parent="Player"]
 transform = Transform( 0.803338, 0.594334, 0.0376298, -0.593857, 0.804213, -0.0240021, -0.0445276, -0.00306489, 0.999004, -0.0572722, 4.15995, 0.0134769 )
 omni_range = 13.557
 
 [node name="cubo" parent="Player" instance=ExtResource( 2 )]
+
+[node name="CameraPivot" type="Position3D" parent="Player"]
+transform = Transform( 0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="Player/CameraPivot"]
+transform = Transform( 1, 1.70494e-10, 4.99767e-10, -4.73946e-10, 0.707107, 0.707107, -2.32831e-10, -0.707107, 0.707106, 0, 10, 10 )
+projection = 1
+size = 50.0
+
+[editable path="Player/cubo"]
