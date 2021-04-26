@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
+[ext_resource path="res://Objects/chave de fenda.fbx" type="PackedScene" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.152941, 0.329412, 0.945098, 1 )
+
+[sub_resource type="CubeMesh" id=1]
+material = SubResource( 3 )
+size = Vector3( 1, 2, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.5, 1, 0.5 )
+
+[node name="KinematicBody" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="Head" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.470197, -0.14132 )
+
+[node name="chave de fenda" parent="Head" instance=ExtResource( 2 )]
+transform = Transform( 0.147751, -0.0141219, 0.0138254, 0.00704603, 0.144561, 0.0576967, -0.0179198, -0.0595958, 0.136678, 0.974, -0.195, -0.981 )
