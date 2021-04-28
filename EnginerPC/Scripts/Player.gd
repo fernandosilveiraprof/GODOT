@@ -16,6 +16,14 @@ var mouse_sensivity = 0.1
 
 onready var head = $Head
 onready var camera = $Head/Camera
+onready var reach = $Head/Camera/RayCast
+onready var hand = $Head/hand
+
+onready var item_a_hr = preload("res://Scenes/Item1HD.tscn")
+onready var item_a = preload("res://Scenes/Item1.tscn")
+
+var item_to_spawn
+var item_to_drop
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

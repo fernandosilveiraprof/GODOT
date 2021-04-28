@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Cenario.fbx-c9bbb032874cc7a5521c36bb60fbbebc.scn"
+path="res://.import/chave de fenad.fbx-f71dfc0db6348d80ddbf6e5d450c1f67.scn"
 
 [deps]
 
-source_file="res://Objects/Cenario.fbx"
-dest_files=[ "res://.import/Cenario.fbx-c9bbb032874cc7a5521c36bb60fbbebc.scn" ]
+source_file="res://Objects/chave de fenad.fbx"
+dest_files=[ "res://.import/chave de fenad.fbx-f71dfc0db6348d80ddbf6e5d450c1f67.scn" ]
 
 [params]
 

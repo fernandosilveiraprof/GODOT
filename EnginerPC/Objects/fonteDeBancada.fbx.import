@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/chave de fenda.fbx-72853d17e52f072d679a28c36b8f4d5a.scn"
+path="res://.import/fonteDeBancada.fbx-b810fbcd8802a56e1b7c12e198da2223.scn"
 
 [deps]
 
-source_file="res://Objects/chave de fenda.fbx"
-dest_files=[ "res://.import/chave de fenda.fbx-72853d17e52f072d679a28c36b8f4d5a.scn" ]
+source_file="res://Objects/fonteDeBancada.fbx"
+dest_files=[ "res://.import/fonteDeBancada.fbx-b810fbcd8802a56e1b7c12e198da2223.scn" ]
 
 [params]
 
