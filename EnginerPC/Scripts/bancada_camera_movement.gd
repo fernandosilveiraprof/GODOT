@@ -5,15 +5,15 @@ onready var cameramonitor = $Camera2
 onready var camerapc = $Camera3
 
 
-
+var move = Vector3()
 
 func _ready():
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
 
 
 func _on_Button_pressed():
@@ -35,3 +35,4 @@ func _on_Button3_pressed():
 		cameramonitor.current = false
 		camerapc.current = false
 		camerabalcao.current = true
+
