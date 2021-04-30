@@ -4,6 +4,9 @@ onready var camerabalcao = $Camera
 onready var cameramonitor = $Camera2
 onready var camerapc = $Camera3
 
+
+
+
 func _ready():
 	pass # Replace with function body.
 
